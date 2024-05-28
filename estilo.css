@@ -1,0 +1,24 @@
+body {
+    font-family: courier,arial,helvetica;
+}
+.container {
+    background-color: #ebebeb;
+    width: 500px;
+    position: relative;
+    margin: 0px auto;
+    border-style: solid;
+    border-color: rgb(240, 229, 200);
+    
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    padding-bottom: 30px;
+}
+p {
+    color: rgb(0, 0, 0);
+}
+a {
+    color: red;
+}
