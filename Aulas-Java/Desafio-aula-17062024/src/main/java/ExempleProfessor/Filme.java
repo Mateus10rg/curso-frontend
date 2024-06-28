@@ -9,34 +9,42 @@ public class Filme {
     private double somaDasAvaliacoes;
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
     public void setAnoDeLancamento(int anoDeLancamento) {
+
         this.anoDeLancamento = anoDeLancamento;
     }
 
     public void setSinopse(String sinopse) {
+
         this.sinopse = sinopse;
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public int getAnoDeLancamento() {
+
         return anoDeLancamento;
     }
 
     public String getSinopse() {
+
         return sinopse;
     }
 
     public int getQuantidadeDeAvaliacao() {
+
         return quantidadeDeAvaliacao;
     }
 
     public double getSomaDasAvaliacoes() {
+
         return somaDasAvaliacoes;
     }
 
