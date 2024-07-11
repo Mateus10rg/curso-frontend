@@ -55,7 +55,32 @@ public class GerenciadorEstoque {
                     break;
 
                 case 4:
+                    System.out.println("Digite o nome do produto para vender: ");
+                    String vendasProduto = entrada.nextLine();
+                    System.out.println("Digite a quantidade de produtos para vender: ");
+                    int quantidadeProdutos = entrada.nextInt();
+                    entrada.nextLine();
 
+                    Produto produtoParaVender = null;
+                    for (Produto p : produtos) {
+                        if (p.getNome().equalsIgnoreCase(vendasProduto)) {
+                            produtoParaVender = p;
+                            break;
+                        }
+                    }
+
+                    if (produtoParaVender == null) {
+                        System.out.println("Produto não encontrado!");
+                    } else if (produtoParaVender.getQuantidade() < quantidadeProdutos) {
+                        System.out.println("Estoque insuficiente para essa quantidade de produtos!");
+                    } else {
+                        produtoParaVender.setQuantidade(produtoParaVender.getQuantidade() - quantidadeProdutos);
+                        Venda venda = new Venda();
+                        venda.setProduto(produtoParaVender.getNome());
+                        venda.setQuantidade(quantidadeProdutos);
+                        vendas.add(venda);
+                        System.out.println("Produto " + produtoParaVender.getNome() + " vendido!");
+                    }
                     break;
                 case 5:
 
@@ -82,7 +107,7 @@ public class GerenciadorEstoque {
         System.out.println("Digite o preço de custo do produto: ");
         double precoDeCusto = entrada.nextInt();
         produto.setPrecoDeCusto(precoDeCusto);
-        System.out.println("Digite a quantidade do produto: ");
+        System.out.println("Digite o preço de venda do produto: ");
         double precoDeVenda = entrada.nextInt();
         produto.setPrecoVenda(precoDeVenda);
     }

@@ -32,8 +32,6 @@ public class Main {
                     novaNota(aluno);
                     novaNota(aluno);
                     alunos.add(aluno);
-
-
                     break;
                 case 2:
 
@@ -51,7 +49,6 @@ public class Main {
                             alunos.remove(i);
                         }
                     }
-
                     break;
                 case 4:
                     System.out.println(alunos.toString());
